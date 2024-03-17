@@ -2,4 +2,23 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Estilos CSS */
+.fondo {
+  
+    /* Estilos CSS */
+
+    background-image: url("/img/iglupng.png"); /* Ruta relativa a la carpeta public */
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 100vh;
+    position: relative; /* Añadir posición relativa */
+    overflow-y: scroll; /* Cambio de overflowY a overflow-y */
+    border-image: fill 0 linear-gradient(#0001 , #000);
+  }
+  
+  
+  
+
 

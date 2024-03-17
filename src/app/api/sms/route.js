@@ -7,12 +7,15 @@ const phone = process.env.TWILIO_PHONE;
 const user = process.env.TWILIO_PHONE_USER;
 const client = twilio(accountSiid , authToken);
 
-export async function GET(){
+export async function POST(request){
+    console.log("BACK");
    try {
+    console.log("DATOS DESDE EL FRONT " , request.json);
+    const data = await request.json();
     const message = await  client.messages.create({
-        body: "HOLA BEYBY, SOY JARRY" , 
+        body: data.message, 
         from: phone,
-        to : user,
+        to : data.phone,
     }) ;
 
     console.log("EL mensaje enviado fue " , message.sid)
